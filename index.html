@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>My Third Finger Ring</title>
+<meta name="description" content="A Precious Memory. An Endless Passage of Time.">
+<meta name="theme-color" content="#0c0b0a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+
+<header class="hero">
+  <h1>My Third Finger Ring</h1>
+  <p class="tagline">A Precious Memory. An Endless Passage of Time.</p>
+</header>
+
+<section class="photo" aria-label="Ring photograph">
+  <figure class="frame">
+    <button class="frame-btn" id="openPhoto" type="button" aria-label="View the ring photograph larger">
+      <img id="ringPhoto"
+           src="https://raw.githubusercontent.com/AlphaStopwatch/My-Third-Finger-Ring-Stopwatch/main/8888888876.jpg"
+           alt="My third finger ring" decoding="async">
+    </button>
+    <p class="photo-error" id="photoError" hidden>The ring photograph could not be loaded. Check your internet connection and reload the page.</p>
+  </figure>
+</section>
+
+<section class="story" aria-labelledby="storyTitle">
+  <h2 id="storyTitle">My Ring’s Story</h2>
+  <blockquote>
+    <p>“I bought this ring for just <span class="hl">$20</span> from an elderly man in <span class="hl">Shakhari Bazar</span> during <span class="hl">Kali Puja</span>. I was so excited that I couldn’t wait to show everyone my new ring. I can hardly describe how happy and excited I felt at that moment.”</p>
+  </blockquote>
+</section>
+
+<section class="watch" aria-labelledby="watchTitle">
+  <h2 id="watchTitle">Time Together</h2>
+  <div class="panel">
+    <div class="grid" role="timer" aria-label="Elapsed time since 11 November 2026, 5:00:00 PM Bangladesh time">
+      <div class="cell"><b id="sw-years">0</b><span>Years</span></div>
+      <div class="cell"><b id="sw-months">0</b><span>Months</span></div>
+      <div class="cell"><b id="sw-days">0</b><span>Days</span></div>
+      <div class="cell"><b id="sw-hours">00</b><span>Hours</span></div>
+      <div class="cell"><b id="sw-minutes">00</b><span>Minutes</span></div>
+      <div class="cell"><b id="sw-seconds">00</b><span>Seconds</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="started" aria-label="Stopwatch start">
+  <p class="k">STOPWATCH STARTED</p>
+  <p class="d">Wednesday, 11 November 2026</p>
+  <p class="t">5:00:00 PM</p>
+  <p class="z">Bangladesh Standard Time (UTC+6)</p>
+</section>
+
+<section class="clock" aria-label="Live Bangladesh clock">
+  <p class="k">BANGLADESH NOW</p>
+  <p class="d" id="clk-date">—</p>
+  <p class="t"><span id="clk-time">--:--:--</span> <small id="clk-ampm"></small></p>
+  <p class="z">Bangladesh Standard Time (BST, UTC+6)</p>
+  <p class="sync" id="syncStatus" role="status">Checking time source…</p>
+</section>
+
+</main>
+
+<footer><p>One ring. One memory. Infinite time.</p></footer>
+
+<dialog id="lightbox" aria-label="Enlarged ring photograph">
+  <button class="close" id="closePhoto" type="button" aria-label="Close enlarged photograph">&times;</button>
+  <img id="bigPhoto" alt="My third finger ring, enlarged">
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>
